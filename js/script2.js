@@ -1,4 +1,24 @@
+let input = document.getElementById("playerNameInput");
+
+
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    let playerNameDiv = document.getElementById('playerName');
+    event.preventDefault();
+    document.getElementById("btn").click();
+    playerNameDiv.innerHTML = input.value;
+  
+    // Gömma input field och button
+    document.getElementById('divSetPlayerName').style.display = 'none';
+  }
+});
+
+
+
+
+
 function setPlayerName(){
+  
     var playerNameDiv = document.getElementById('playerName');
       
     playerNameDiv.innerHTML = document.getElementById('playerNameInput').value;
